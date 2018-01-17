@@ -26,7 +26,7 @@ serde_derive = { version = "1.0", path = "../serde_derive" }
 ### FEATURES #################################################################
 
 [features]
-default = ["std"]
+default = ["alloc"]
 
 # Re-export the derive(Serialize, Deserialize) macros. This is specifically
 # intended for library crates that provide optional Serde impls behind a Cargo

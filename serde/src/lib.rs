@@ -202,10 +202,10 @@ mod lib {
     pub use std::num::Wrapping;
     #[cfg(feature = "std")]
     pub use std::path::{Path, PathBuf};
-    #[cfg(feature = "std")]
-    pub use std::time::{Duration, SystemTime, UNIX_EPOCH};
-    #[cfg(feature = "std")]
-    pub use std::sync::{Mutex, RwLock};
+    // #[cfg(feature = "std")]
+    // pub use std::time::{Duration, SystemTime, UNIX_EPOCH};
+    // #[cfg(feature = "std")]
+    // pub use std::sync::{Mutex, RwLock};
 
     #[cfg(feature = "unstable")]
     pub use core::nonzero::{NonZero, Zeroable};
