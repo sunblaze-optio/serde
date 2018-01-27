@@ -1,5 +1,5 @@
 [package]
-name = "serde"
+name = "serde-sgx"
 version = "1.0.27" # remember to update html_root_url
 authors = ["Erick Tryzelaar <erick.tryzelaar@gmail.com>", "David Tolnay <dtolnay@gmail.com>"]
 license = "MIT/Apache-2.0"
@@ -11,6 +11,9 @@ keywords = ["serde", "serialization", "no_std"]
 categories = ["encoding"]
 readme = "README.md"
 include = ["Cargo.toml", "src/**/*.rs", "README.md", "LICENSE-APACHE", "LICENSE-MIT"]
+
+[lib]
+name = "serde"
 
 [badges]
 travis-ci = { repository = "serde-rs/serde" }
