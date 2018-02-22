@@ -207,8 +207,12 @@ mod lib {
     pub use std::path::{Path, PathBuf};
     #[cfg(feature = "std")]
     pub use std::time::{Duration, SystemTime, UNIX_EPOCH};
-    #[cfg(feature = "std")]
+    #[cfg(all(feature = "std", not(target_env = "sgx")))]
     pub use std::sync::{Mutex, RwLock};
+    #[cfg(all(feature = "std", target_env = "sgx"))]
+    pub use std::sync::SgxMutex as Mutex;
+    #[cfg(all(feature = "std", target_env = "sgx"))]
+    pub use std::sync::SgxRwLock as RwLock;
 
     #[cfg(feature = "unstable")]
     pub use core::nonzero::{NonZero, Zeroable};
